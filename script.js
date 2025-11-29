@@ -1,40 +1,73 @@
-// Animate sections on scroll
+/* =========================================
+   Section Fade-In Animation on Scroll
+========================================= */
 const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // optional: animate only once
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
 sections.forEach(section => observer.observe(section));
 
-// Highlight active nav link
+/* =========================================
+   Active Navigation Highlight on Scroll
+========================================= */
 const navLinks = document.querySelectorAll('nav ul li a');
+
 window.addEventListener('scroll', () => {
-  let current = '';
+  let currentSection = '';
+
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if(scrollY >= sectionTop) current = section.getAttribute('id');
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      currentSection = section.getAttribute('id');
+    }
   });
+
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if(link.getAttribute('href') === `#${current}`) link.classList.add('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
   });
 });
 
-// Toggle mobile menu
+/* =========================================
+   Mobile Menu Toggle
+========================================= */
 const menuToggle = document.getElementById('menu-toggle');
 const navLinksContainer = document.getElementById('nav-links');
+
 menuToggle.addEventListener('click', () => {
   navLinksContainer.classList.toggle('active');
 });
 
-// Language toggle
+/* =========================================
+   Language Toggle (English ↔ Filipino)
+========================================= */
 let isEnglish = true;
+
 function toggleLang() {
   isEnglish = !isEnglish;
-  document.querySelectorAll('.lang-en').forEach(el => el.style.display = isEnglish ? 'block' : 'none');
-  document.querySelectorAll('.lang-ph').forEach(el => el.style.display = isEnglish ? 'none' : 'block');
+
+  // Show/hide English elements
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.style.display = isEnglish ? 'block' : 'none';
+  });
+
+  // Show/hide Filipino elements
+  document.querySelectorAll('.lang-ph').forEach(el => {
+    el.style.display = isEnglish ? 'none' : 'block';
+  });
+
+  // Update toggle button text
   document.getElementById('lang-toggle').innerText = isEnglish ? 'Filipino' : 'English';
 }

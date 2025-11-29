@@ -39,9 +39,10 @@ nav .logo {
   font-weight: 700;
   color: #d1849e;
   font-size: 1.4rem;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 nav .logo:hover {
   color: #ffbfd4;
   transform: scale(1.1) rotate(-5deg);
@@ -135,17 +136,18 @@ header p {
    Section Styles
 ========================================= */
 section {
-  background: #ffffff;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
   width: 90%;
   max-width: 950px;
   margin: 40px auto;
   padding: 40px 45px;
   border-radius: 20px;
   border-left: 6px solid #ffbfd4;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   opacity: 0;
   transform: translateY(50px);
-  transition: 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 section.visible {
@@ -181,12 +183,12 @@ section ul {
 ========================================= */
 .table-container {
   overflow-x: auto;
+  margin-top: 15px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
 }
 
 th, td {
@@ -201,6 +203,19 @@ th {
   color: #d1849e;
 }
 
+/* Highlight row on hover */
+tbody tr:hover {
+  background: rgba(255, 191, 212, 0.2);
+}
+
+/* Responsive Table */
+@media(max-width: 600px) {
+  th, td {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
 /* =========================================
    Language Toggle Button
 ========================================= */
@@ -213,6 +228,12 @@ th {
   cursor: pointer;
   font-weight: 600;
   margin-right: 12px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#lang-toggle:hover {
+  background: #ffbfd4;
+  transform: scale(1.05);
 }
 
 /* =========================================
@@ -244,5 +265,19 @@ th {
 
   header h1 {
     font-size: 2.5rem;
+  }
+}
+
+/* =========================================
+   Scroll Reveal Animation
+========================================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
