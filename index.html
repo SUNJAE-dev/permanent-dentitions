@@ -13,7 +13,10 @@
   <nav>
     <div class="nav-container">
       <div class="logo">🦷 TeethInfo</div>
-      <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+      <div>
+        <button id="lang-toggle" onclick="toggleLang()">Filipino</button>
+        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+      </div>
       <ul id="nav-links">
         <li><a href="#definition" class="active">Definition</a></li>
         <li><a href="#eruption">Age of Eruption</a></li>
@@ -28,54 +31,114 @@
   <!-- Header -->
   <header>
     <img src="tooth.png" class="title-icon" alt="Tooth Icon">
-    <h1>Permanent Dentition</h1>
-    <p>Everything you need to know about permanent teeth.</p>
+    <h1 class="lang-en">Permanent Dentition</h1>
+    <h1 class="lang-ph" style="display:none;">Permanent na Ngipin</h1>
+    <p class="lang-en">Everything you need to know about permanent teeth.</p>
+    <p class="lang-ph" style="display:none;">Lahat ng dapat mong malaman tungkol sa permanenteng ngipin.</p>
   </header>
 
   <!-- Sections -->
   <section id="definition">
-    <h2>What is Permanent Dentition?</h2>
-    <p>Permanent dentition refers to the second set of teeth that replace primary (baby) teeth. 
-      There are 32 permanent teeth in total, composed of:</p>
-    <ul>
+    <h2 class="lang-en">What is Permanent Dentition?</h2>
+    <h2 class="lang-ph" style="display:none;">Ano ang Permanenteng Ngipin?</h2>
+    <p class="lang-en">Permanent dentition refers to the second set of teeth that replace primary (baby) teeth. There are 32 permanent teeth in total, composed of:</p>
+    <p class="lang-ph" style="display:none;">Ang permanenteng ngipin ay ang pangalawang hanay ng ngipin na pumapalit sa primarya (baby) teeth. May kabuuang 32 permanent teeth, binubuo ng:</p>
+    <ul class="lang-en">
       <li>8 Incisors (cutting food)</li>
       <li>4 Canines (tearing food)</li>
       <li>8 Premolars (crushing/tearing)</li>
       <li>12 Molars including 4 third molars or wisdom teeth (grinding food)</li>
     </ul>
-    <p>These teeth are meant to last a lifetime and play essential roles in chewing, speaking, facial structure, and overall oral health.</p>
+    <ul class="lang-ph" style="display:none;">
+      <li>8 Incisors (pamputol ng pagkain)</li>
+      <li>4 Canines (pampunit ng pagkain)</li>
+      <li>8 Premolars (pampiga/pampunit)</li>
+      <li>12 Molars kasama ang 4 third molars o wisdom teeth (pang-giling ng pagkain)</li>
+    </ul>
+    <p class="lang-en">These teeth are meant to last a lifetime and play essential roles in chewing, speaking, facial structure, and overall oral health.</p>
+    <p class="lang-ph" style="display:none;">Ang mga ngiping ito ay panghabambuhay at mahalaga sa pagnguya, pagsasalita, estruktura ng mukha, at pangkalahatang kalusugan ng bibig.</p>
   </section>
 
   <section id="eruption">
-    <h2>Age of Eruption (Chronology)</h2>
-    <p>Permanent teeth typically begin to appear around age of 6 and continue until early adulthood. Below is the general eruption pattern:</p>
-
+    <h2 class="lang-en">Age of Eruption (Chronology)</h2>
+    <h2 class="lang-ph" style="display:none;">Edad ng Paglabas ng Ngipin (Chronology)</h2>
+    <p class="lang-en">Permanent teeth typically begin to appear around age of 6 and continue until early adulthood. Below is the general eruption pattern:</p>
+    <p class="lang-ph" style="display:none;">Karaniwang lumilitaw ang permanenteng ngipin mula edad 6 hanggang maagang adulthood. Narito ang karaniwang pattern:</p>
     <div class="table-container">
       <table>
         <thead>
           <tr>
-            <th>Tooth Type</th>
-            <th>Eruption Age</th>
+            <th class="lang-en">Tooth Type</th>
+            <th class="lang-en">Eruption Age</th>
+            <th class="lang-ph" style="display:none;">Uri ng Ngipin</th>
+            <th class="lang-ph" style="display:none;">Edad ng Paglabas</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Central incisors</td><td>6–7 years</td></tr>
-          <tr><td>Lateral incisors</td><td>7–8 years</td></tr>
-          <tr><td>Canines (maxillary)</td><td>11–12 years</td></tr>
-          <tr><td>Canines (mandibular)</td><td>9–10 years</td></tr>
-          <tr><td>First premolars</td><td>10–11 years</td></tr>
-          <tr><td>Second premolars</td><td>11–12 years</td></tr>
-          <tr><td>First molars</td><td>6–7 years</td></tr>
-          <tr><td>Second molars</td><td>11–13 years</td></tr>
-          <tr><td>Third molars (wisdom teeth)</td><td>17–21 years</td></tr>
+          <tr>
+            <td class="lang-en">Central incisors</td>
+            <td class="lang-en">6–7 years</td>
+            <td class="lang-ph" style="display:none;">Central incisors</td>
+            <td class="lang-ph" style="display:none;">6–7 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Lateral incisors</td>
+            <td class="lang-en">7–8 years</td>
+            <td class="lang-ph" style="display:none;">Lateral incisors</td>
+            <td class="lang-ph" style="display:none;">7–8 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Canines (maxillary)</td>
+            <td class="lang-en">11–12 years</td>
+            <td class="lang-ph" style="display:none;">Canines (maxillary)</td>
+            <td class="lang-ph" style="display:none;">11–12 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Canines (mandibular)</td>
+            <td class="lang-en">9–10 years</td>
+            <td class="lang-ph" style="display:none;">Canines (mandibular)</td>
+            <td class="lang-ph" style="display:none;">9–10 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">First premolars</td>
+            <td class="lang-en">10–11 years</td>
+            <td class="lang-ph" style="display:none;">First premolars</td>
+            <td class="lang-ph" style="display:none;">10–11 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Second premolars</td>
+            <td class="lang-en">11–12 years</td>
+            <td class="lang-ph" style="display:none;">Second premolars</td>
+            <td class="lang-ph" style="display:none;">11–12 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">First molars</td>
+            <td class="lang-en">6–7 years</td>
+            <td class="lang-ph" style="display:none;">First molars</td>
+            <td class="lang-ph" style="display:none;">6–7 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Second molars</td>
+            <td class="lang-en">11–13 years</td>
+            <td class="lang-ph" style="display:none;">Second molars</td>
+            <td class="lang-ph" style="display:none;">11–13 taon</td>
+          </tr>
+          <tr>
+            <td class="lang-en">Third molars (wisdom teeth)</td>
+            <td class="lang-en">17–21 years</td>
+            <td class="lang-ph" style="display:none;">Third molars (wisdom teeth)</td>
+            <td class="lang-ph" style="display:none;">17–21 taon</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <!-- Do’s, Don’ts, Proper Care, and Consequences sections -->
   <section id="dos">
-    <h2>Do’s</h2>
-    <ul>
+    <h2 class="lang-en">Do’s</h2>
+    <h2 class="lang-ph" style="display:none;">Gawin</h2>
+    <ul class="lang-en">
       <li>Brush twice daily with fluoride toothpaste</li>
       <li>Floss once a day</li>
       <li>Visit the dentist every 6 months</li>
@@ -84,11 +147,21 @@
       <li>Drink fluoridated water</li>
       <li>Wear mouthguards for sports</li>
     </ul>
+    <ul class="lang-ph" style="display:none;">
+      <li>Magsepilyo ng dalawang beses araw-araw gamit ang fluoride toothpaste</li>
+      <li>Mag-floss isang beses sa isang araw</li>
+      <li>Bumisita sa dentista kada 6 na buwan</li>
+      <li>Mantine ang balanseng diet na mababa sa asukal</li>
+      <li>Gumamit ng fluoride mouthwash at isaalang-alang ang sealants</li>
+      <li>Uminom ng fluoridated na tubig</li>
+      <li>Magsuot ng mouthguard sa sports</li>
+    </ul>
   </section>
 
   <section id="donts">
-    <h2>Don’ts</h2>
-    <ul>
+    <h2 class="lang-en">Don’ts</h2>
+    <h2 class="lang-ph" style="display:none;">Huwag Gawin</h2>
+    <ul class="lang-en">
       <li>Don't skip brushing before bed</li>
       <li>Don't bite hard objects</li>
       <li>Don't consume sugary snacks frequently</li>
@@ -96,11 +169,20 @@
       <li>Don't smoke or vape</li>
       <li>Don't ignore early signs of dental problems</li>
     </ul>
+    <ul class="lang-ph" style="display:none;">
+      <li>Huwag laktawan ang pagsisipilyo bago matulog</li>
+      <li>Huwag kagatin ang matitigas na bagay</li>
+      <li>Huwag madalas kumain ng matatamis na meryenda</li>
+      <li>Huwag gamitin ang ngipin bilang kasangkapan</li>
+      <li>Huwag manigarilyo o mag-vape</li>
+      <li>Huwag balewalain ang maagang palatandaan ng problema sa ngipin</li>
+    </ul>
   </section>
 
   <section id="proper-care">
-    <h2>Proper Care</h2>
-    <ul>
+    <h2 class="lang-en">Proper Care</h2>
+    <h2 class="lang-ph" style="display:none;">Tamang Pangangalaga</h2>
+    <ul class="lang-en">
       <li>Brush 2 minutes using circular motions</li>
       <li>Floss properly daily</li>
       <li>Sealants for children's molars</li>
@@ -108,60 +190,56 @@
       <li>Healthy eating habits</li>
       <li>Wear mouthguards during sports</li>
     </ul>
+    <ul class="lang-ph" style="display:none;">
+      <li>Magsepilyo ng 2 minuto gamit ang paikot na galaw</li>
+      <li>Mag-floss nang maayos araw-araw</li>
+      <li>Sealants para sa molars ng mga bata</li>
+      <li>Orthodontic evaluation sa edad 7</li>
+      <li>Mantine ang malusog na pagkain</li>
+      <li>Magsuot ng mouthguard sa sports</li>
+    </ul>
   </section>
 
   <section id="consequences">
-    <h2>What Happens If Oral Care Is Ignored?</h2>
-    <h3>Short-term</h3>
-    <ul>
-      <li>Tooth decay</li>
-      <li>Gingivitis</li>
-      <li>Bad breath</li>
+    <h2 class="lang-en">Consequences of Neglecting Oral Care</h2>
+    <h2 class="lang-ph" style="display:none;">Kahihinatnan ng Pagwawalang-bahala sa Ngipin</h2>
+    <h3 class="lang-en">Short-term</h3>
+    <h3 class="lang-ph" style="display:none;">Pang-Maikling Panahon</h3>
+    <ul class="lang-en">
+      <li>Dental caries (tooth decay)</li>
+      <li>Gingivitis (gum inflammation)</li>
+      <li>Bad breath (halitosis)</li>
       <li>Tooth sensitivity</li>
     </ul>
-    <h3>Long-term</h3>
-    <ul>
-      <li>Periodontitis (gum recession, bone loss)</li>
-      <li>Tooth loss</li>
-      <li>Dental abscesses</li>
+    <ul class="lang-ph" style="display:none;">
+      <li>Dental caries (pagkabulok ng ngipin)</li>
+      <li>Gingivitis (pamamaga ng gilagid)</li>
+      <li>Masamang hininga (halitosis)</li>
+      <li>Sensitibong ngipin</li>
+    </ul>
+    <h3 class="lang-en">Long-term</h3>
+    <h3 class="lang-ph" style="display:none;">Pang-Matagalang Panahon</h3>
+    <ul class="lang-en">
+      <li>Periodontitis → gum recession, bone loss, loose teeth</li>
+      <li>Tooth loss (irreversible damage to gums and bone)</li>
+      <li>Severe infections such as dental abscesses</li>
       <li>Difficulty chewing and speaking</li>
-      <li>Malocclusion</li>
-      <li>Systemic effects (heart disease, diabetes complications)</li>
+      <li>Malocclusion if decay causes early tooth loss</li>
+      <li>Systemic effects: linked to heart disease, diabetes complications, low birth weight, etc.</li>
+      <li>Permanent teeth damage is often irreversible and may require costly interventions (root canals, crowns, extractions, implants)</li>
+    </ul>
+    <ul class="lang-ph" style="display:none;">
+      <li>Periodontitis → pag-urong ng gilagid, pagkawala ng buto, maluwag na ngipin</li>
+      <li>Pagkawala ng ngipin (hindi na maibabalik ang pinsala sa gilagid at buto)</li>
+      <li>Malubhang impeksiyon gaya ng dental abscesses</li>
+      <li>Kahirapan sa pagnguya at pagsasalita</li>
+      <li>Malocclusion kung ang pagkabulok ay nagdulot ng maagang pagkawala ng ngipin</li>
+      <li>Systemic effects: kaugnay sa sakit sa puso, komplikasyon ng diabetes, mababang timbang ng ipinapanganak, atbp.</li>
+      <li>Ang pinsala sa permanenteng ngipin ay kadalasang hindi na maibabalik at maaaring mangailangan ng mahal na paggamot (root canals, crowns, extraction, implants)</li>
     </ul>
   </section>
 
-  <script>
-    // Animate sections on scroll
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-
-    // Highlight active nav link
-    const navLinks = document.querySelectorAll('nav ul li a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80;
-        if(scrollY >= sectionTop) current = section.getAttribute('id');
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if(link.getAttribute('href') === `#${current}`) link.classList.add('active');
-      });
-    });
-
-    // Toggle mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinksContainer = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinksContainer.classList.toggle('active');
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
