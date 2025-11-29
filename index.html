@@ -12,7 +12,8 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <div class="logo">🦷 TeethInfo</div>
+      <a href="#" class="logo">🦷 TeethInfo</a>
+
       <div>
         <button id="lang-toggle" onclick="toggleLang()">Filipino</button>
         <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
@@ -60,79 +61,59 @@
   </section>
 
   <section id="eruption">
-    <h2 class="lang-en">Age of Eruption (Chronology)</h2>
-    <h2 class="lang-ph" style="display:none;">Edad ng Paglabas ng Ngipin (Chronology)</h2>
-    <p class="lang-en">Permanent teeth typically begin to appear around age of 6 and continue until early adulthood. Below is the general eruption pattern:</p>
-    <p class="lang-ph" style="display:none;">Karaniwang lumilitaw ang permanenteng ngipin mula edad 6 hanggang maagang adulthood. Narito ang karaniwang pattern:</p>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th class="lang-en">Tooth Type</th>
-            <th class="lang-en">Eruption Age</th>
-            <th class="lang-ph" style="display:none;">Uri ng Ngipin</th>
-            <th class="lang-ph" style="display:none;">Edad ng Paglabas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="lang-en">Central incisors</td>
-            <td class="lang-en">6–7 years</td>
-            <td class="lang-ph" style="display:none;">Central incisors</td>
-            <td class="lang-ph" style="display:none;">6–7 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Lateral incisors</td>
-            <td class="lang-en">7–8 years</td>
-            <td class="lang-ph" style="display:none;">Lateral incisors</td>
-            <td class="lang-ph" style="display:none;">7–8 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Canines (maxillary)</td>
-            <td class="lang-en">11–12 years</td>
-            <td class="lang-ph" style="display:none;">Canines (maxillary)</td>
-            <td class="lang-ph" style="display:none;">11–12 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Canines (mandibular)</td>
-            <td class="lang-en">9–10 years</td>
-            <td class="lang-ph" style="display:none;">Canines (mandibular)</td>
-            <td class="lang-ph" style="display:none;">9–10 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">First premolars</td>
-            <td class="lang-en">10–11 years</td>
-            <td class="lang-ph" style="display:none;">First premolars</td>
-            <td class="lang-ph" style="display:none;">10–11 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Second premolars</td>
-            <td class="lang-en">11–12 years</td>
-            <td class="lang-ph" style="display:none;">Second premolars</td>
-            <td class="lang-ph" style="display:none;">11–12 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">First molars</td>
-            <td class="lang-en">6–7 years</td>
-            <td class="lang-ph" style="display:none;">First molars</td>
-            <td class="lang-ph" style="display:none;">6–7 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Second molars</td>
-            <td class="lang-en">11–13 years</td>
-            <td class="lang-ph" style="display:none;">Second molars</td>
-            <td class="lang-ph" style="display:none;">11–13 taon</td>
-          </tr>
-          <tr>
-            <td class="lang-en">Third molars (wisdom teeth)</td>
-            <td class="lang-en">17–21 years</td>
-            <td class="lang-ph" style="display:none;">Third molars (wisdom teeth)</td>
-            <td class="lang-ph" style="display:none;">17–21 taon</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <h2 class="lang-en">Age of Eruption (Chronology)</h2>
+  <h2 class="lang-ph" style="display:none;">Edad ng Paglabas ng Ngipin (Chronology)</h2>
+
+  <p class="lang-en">Permanent teeth typically begin to appear around age of 6 and continue until early adulthood. Below is the general eruption pattern:</p>
+  <p class="lang-ph" style="display:none;">Karaniwang lumilitaw ang permanenteng ngipin mula edad 6 hanggang maagang adulthood. Narito ang karaniwang pattern:</p>
+
+  <!-- English Table -->
+  <div class="table-container lang-en">
+    <table>
+      <thead>
+        <tr>
+          <th>Tooth Type</th>
+          <th>Eruption Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Central incisors</td><td>6–7 years</td></tr>
+        <tr><td>Lateral incisors</td><td>7–8 years</td></tr>
+        <tr><td>Canines (maxillary)</td><td>11–12 years</td></tr>
+        <tr><td>Canines (mandibular)</td><td>9–10 years</td></tr>
+        <tr><td>First premolars</td><td>10–11 years</td></tr>
+        <tr><td>Second premolars</td><td>11–12 years</td></tr>
+        <tr><td>First molars</td><td>6–7 years</td></tr>
+        <tr><td>Second molars</td><td>11–13 years</td></tr>
+        <tr><td>Third molars (wisdom teeth)</td><td>17–21 years</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Filipino Table -->
+  <div class="table-container lang-ph" style="display:none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Uri ng Ngipin</th>
+          <th>Edad ng Paglabas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Central incisors</td><td>6–7 taon</td></tr>
+        <tr><td>Lateral incisors</td><td>7–8 taon</td></tr>
+        <tr><td>Canines (maxillary)</td><td>11–12 taon</td></tr>
+        <tr><td>Canines (mandibular)</td><td>9–10 taon</td></tr>
+        <tr><td>First premolars</td><td>10–11 taon</td></tr>
+        <tr><td>Second premolars</td><td>11–12 taon</td></tr>
+        <tr><td>First molars</td><td>6–7 taon</td></tr>
+        <tr><td>Second molars</td><td>11–13 taon</td></tr>
+        <tr><td>Third molars (wisdom teeth)</td><td>17–21 taon</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 
   <!-- Do’s, Don’ts, Proper Care, and Consequences sections -->
   <section id="dos">
@@ -203,8 +184,9 @@
   <section id="consequences">
     <h2 class="lang-en">Consequences of Neglecting Oral Care</h2>
     <h2 class="lang-ph" style="display:none;">Kahihinatnan ng Pagwawalang-bahala sa Ngipin</h2>
-    <h3 class="lang-en">Short-term</h3>
-    <h3 class="lang-ph" style="display:none;">Pang-Maikling Panahon</h3>
+
+    <h3 class="lang-en">Short-term consequences</h3>
+    <h3 class="lang-ph" style="display:none;">Pang-maikling Kahihinatnan</h3>
     <ul class="lang-en">
       <li>Dental caries (tooth decay)</li>
       <li>Gingivitis (gum inflammation)</li>
@@ -217,16 +199,16 @@
       <li>Masamang hininga (halitosis)</li>
       <li>Sensitibong ngipin</li>
     </ul>
-    <h3 class="lang-en">Long-term</h3>
-    <h3 class="lang-ph" style="display:none;">Pang-Matagalang Panahon</h3>
+
+    <h3 class="lang-en">Long-term consequences</h3>
+    <h3 class="lang-ph" style="display:none;">Pang-matagalang Kahihinatnan</h3>
     <ul class="lang-en">
       <li>Periodontitis → gum recession, bone loss, loose teeth</li>
       <li>Tooth loss (irreversible damage to gums and bone)</li>
       <li>Severe infections such as dental abscesses</li>
       <li>Difficulty chewing and speaking</li>
       <li>Malocclusion if decay causes early tooth loss</li>
-      <li>Systemic effects: linked to heart disease, diabetes complications, low birth weight, etc.</li>
-      <li>Permanent teeth damage is often irreversible and may require costly interventions (root canals, crowns, extractions, implants)</li>
+      <li>Systemic effects: Poor oral health is linked to heart disease, diabetes complications, low birth weight, etc.</li>
     </ul>
     <ul class="lang-ph" style="display:none;">
       <li>Periodontitis → pag-urong ng gilagid, pagkawala ng buto, maluwag na ngipin</li>
@@ -234,9 +216,11 @@
       <li>Malubhang impeksiyon gaya ng dental abscesses</li>
       <li>Kahirapan sa pagnguya at pagsasalita</li>
       <li>Malocclusion kung ang pagkabulok ay nagdulot ng maagang pagkawala ng ngipin</li>
-      <li>Systemic effects: kaugnay sa sakit sa puso, komplikasyon ng diabetes, mababang timbang ng ipinapanganak, atbp.</li>
-      <li>Ang pinsala sa permanenteng ngipin ay kadalasang hindi na maibabalik at maaaring mangailangan ng mahal na paggamot (root canals, crowns, extraction, implants)</li>
+      <li>Systemic effects: Kaugnay sa sakit sa puso, komplikasyon ng diabetes, mababang timbang ng ipinapanganak, atbp.</li>
     </ul>
+
+    <p class="lang-en">Without proper care, permanent teeth—unlike baby teeth—do not naturally get replaced. Damage is often irreversible and may require costly interventions (root canals, crowns, extractions, implants).</p>
+    <p class="lang-ph" style="display:none;">Kung walang tamang pangangalaga, ang permanenteng ngipin—hindi tulad ng baby teeth—ay hindi natural na napapalitan. Ang pinsala ay kadalasang hindi na maibabalik at maaaring mangailangan ng mahal na paggamot (root canals, crowns, extraction, implants).</p>
   </section>
 
   <!-- Scripts -->
