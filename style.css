@@ -44,6 +44,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 1000px; /* default open on desktop */
 }
 
 nav ul li a {
@@ -197,6 +200,9 @@ ul li::before {
 }
 
 /* Table */
+.table-container {
+  overflow-x: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -231,18 +237,19 @@ table tbody tr:hover {
 /* Responsive nav */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+    display: flex;
     flex-direction: column;
     background: #ffe6f0;
     width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 15px 0;
+    padding: 0;
+    max-height: 0;
   }
 
   nav ul.active {
-    display: flex;
+    max-height: 500px;
   }
 
   nav ul li {
@@ -277,11 +284,10 @@ table tbody tr:hover {
     padding: 10px 12px;
     font-size: 0.9rem;
   }
+}
 
-  /* Make table scrollable */
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+@media (max-width: 400px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 0.9rem; }
+  .title-icon { width: 70px; }
 }
