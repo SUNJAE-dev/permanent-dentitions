@@ -15,65 +15,115 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* =========================================
+/* ===============================
    Navigation Styles
-========================================= */
+=============================== */
 nav {
   background: #ffe6f0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, padding 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 0;
+  text-align: center; /* center everything */
 }
 
-nav .nav-container {
+nav:hover {
+  background: #ffdce8;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* center horizontally */
   align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 12px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-nav .logo {
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
+  font-size: 1.7rem;
   color: #d1849e;
-  font-size: 1.4rem;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-nav .logo:hover {
+.logo-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.logo-text {
+  line-height: 1;
+}
+
+.logo:hover {
   color: #ffbfd4;
   transform: scale(1.1) rotate(-5deg);
-  cursor: pointer;
 }
 
+/* ===============================
+   Navigation Links
+=============================== */
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 26px;
   list-style: none;
-  margin: 0;
+  margin: 10px 0 0 0; /* space below logo */
   padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  justify-content: center; /* center the links */
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #d1849e;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
   position: relative;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 0.6s forwards;
 }
 
+nav ul li:nth-child(1) a { animation-delay: 0.1s; }
+nav ul li:nth-child(2) a { animation-delay: 0.2s; }
+nav ul li:nth-child(3) a { animation-delay: 0.3s; }
+nav ul li:nth-child(4) a { animation-delay: 0.4s; }
+nav ul li:nth-child(5) a { animation-delay: 0.5s; }
+nav ul li:nth-child(6) a { animation-delay: 0.6s; }
+nav ul li:nth-child(7) a { animation-delay: 0.7s; }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* underline animation */
 nav ul li a::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   left: 0;
-  bottom: -3px;
+  bottom: -4px;
   background: #ffbfd4;
   transition: width 0.3s ease;
 }
@@ -83,70 +133,213 @@ nav ul li a.active::after {
   width: 100%;
 }
 
+nav ul li a:hover {
+  color: #ffbfd4;
+  transform: scale(1.05);
+}
+
 nav ul li a.active {
   color: #ffbfd4;
   font-weight: 700;
 }
 
+/* Language Button */
+#lang-toggle {
+  background: #d1849e;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#lang-toggle:hover {
+  background: #ffbfd4;
+  transform: scale(1.05);
+}
+
+/* Menu toggle (mobile) */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
   color: #d1849e;
+  transition: transform 0.3s ease;
 }
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 880px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ffe6f0;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+    padding: 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center right items too */
+    gap: 20px;
+  }
+}
+
 
 /* =========================================
    Header Styles
 ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
 header {
   background: linear-gradient(135deg, #ffdce8 0%, #ffe6f0 100%);
-  color: #5c5c5c;
-  padding: 100px 20px;
+  color: #000; /* black text */
+  padding: 120px 20px;
   text-align: center;
-  border-bottom-left-radius: 50% 10%;
-  border-bottom-right-radius: 50% 10%;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+  border-bottom-left-radius: 50% 12%;
+  border-bottom-right-radius: 50% 12%;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif; /* paragraph font */
 }
 
-header h1 {
-  margin: 15px 0 0 0;
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(255,255,255,0.5);
+/* School Logos */
+.header-logos {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  display: flex;
+  gap: 15px; /* konti mas maliit ang space sa pagitan ng logos */
 }
 
-header p {
-  margin-top: 12px;
-  font-size: 1.3rem;
-  opacity: 0.9;
+.header-logos img {
+  width: 50px;        /* mas maliit kaysa dati */
+  height: auto;
+  opacity: 0.7;       /* konting malabo */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.header-logos img:hover {
+  transform: scale(1.1);
+  opacity: 1;          /* full opacity on hover */
+}
+
+
+/* Tooth Icon */
 .title-icon {
   width: 100px;
   height: auto;
   opacity: 0.95;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
+  margin-bottom: 20px;
 }
 
 .title-icon:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotate(5deg);
 }
+
+/* Header Titles */
+header h1.lang-en,
+header h1.lang-ph {
+  margin: 20px 0 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif; /* Elegant serif title */
+  text-shadow: 2px 2px 10px rgba(255,255,255,0.2); /* subtle shadow */
+  color: #000; /* black text */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header h1.lang-en:hover,
+header h1.lang-ph:hover {
+  transform: scale(1.05);
+  color: #333; /* slightly lighter black on hover */
+}
+
+/* Header Paragraph */
+header p.lang-en,
+header p.lang-ph {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  font-weight: 500;
+  color: #000; /* black paragraph */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  header {
+    padding: 100px 15px;
+  }
+
+  header h1.lang-en,
+  header h1.lang-ph {
+    font-size: 2.8rem;
+  }
+
+  header p.lang-en,
+  header p.lang-ph {
+    font-size: 1.1rem;
+  }
+
+  .header-logos {
+    top: 15px;
+    left: 20px;
+  }
+
+  .title-icon {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+}
+
 
 /* =========================================
    Section Styles
 ========================================= */
 section {
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
   width: 90%;
-  max-width: 950px;
-  margin: 40px auto;
+  max-width: 960px;
+  margin: 50px auto;
   padding: 40px 45px;
-  border-radius: 20px;
+  border-radius: 22px;
   border-left: 6px solid #ffbfd4;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(60px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -157,8 +350,8 @@ section.visible {
 
 section h2 {
   color: #d1849e;
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  margin-bottom: 18px;
 }
 
 section h3 {
@@ -168,14 +361,14 @@ section h3 {
 
 section p,
 section li {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.8;
 }
 
 section ul {
   list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0;
+  padding-left: 25px;
+  margin: 12px 0;
 }
 
 /* =========================================
@@ -189,11 +382,12 @@ section ul {
 table {
   width: 100%;
   border-collapse: collapse;
+  transition: all 0.3s ease;
 }
 
 th, td {
   border: 1px solid #ffbfd4;
-  padding: 12px;
+  padding: 14px;
   text-align: left;
   font-weight: 500;
 }
@@ -201,14 +395,13 @@ th, td {
 th {
   background: #ffe6f0;
   color: #d1849e;
+  font-weight: 600;
 }
 
-/* Highlight row on hover */
 tbody tr:hover {
   background: rgba(255, 191, 212, 0.2);
 }
 
-/* Responsive Table */
 @media(max-width: 600px) {
   th, td {
     padding: 10px;
@@ -221,10 +414,10 @@ tbody tr:hover {
 ========================================= */
 #lang-toggle {
   background: #d1849e;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 6px 14px;
-  border-radius: 8px;
+  padding: 6px 16px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
   margin-right: 12px;
@@ -249,6 +442,7 @@ tbody tr:hover {
     top: 60px;
     left: 0;
     border-radius: 0 0 12px 12px;
+    padding: 12px 0;
   }
 
   nav ul.active {
@@ -264,7 +458,7 @@ tbody tr:hover {
   }
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -280,4 +474,40 @@ tbody tr:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* =========================================
+   Footer Styles
+========================================= */
+footer {
+  background: transparent;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 6px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+footer strong {
+  color: #000;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #d1849e;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.back-to-top:hover {
+  color: #ffbfd4;
+  transform: translateY(-3px);
 }

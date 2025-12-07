@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Permanent Dentition</title>
@@ -10,31 +11,43 @@
 <body>
 
   <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">🦷 TeethInfo</a>
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <span class="logo-icon">🦷</span><span class="logo-text">TeethInfo</span>
+    </a>
 
-      <div>
-        <button id="lang-toggle" onclick="toggleLang()">Filipino</button>
-        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
-      </div>
-
-      <ul id="nav-links">
-        <li><a href="#definition" class="active">Definition</a></li>
-        <li><a href="#eruption">Age of Eruption</a></li>
-        <li><a href="#dos">Do’s</a></li>
-        <li><a href="#donts">Don’ts</a></li>
-        <li><a href="#proper-care">Proper Care</a></li>
-        <li><a href="#consequences">Consequences</a></li>
-      </ul>
+    <div class="nav-right">
+      <button id="lang-toggle" onclick="toggleLang()">Filipino</button>
+      <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
     </div>
-  </nav>
+
+    <ul id="nav-links">
+      <li><a href="#definition" class="active">Definition</a></li>
+      <li><a href="#eruption">Age of Eruption</a></li>
+      <li><a href="#dos">Do’s</a></li>
+      <li><a href="#donts">Don’ts</a></li>
+      <li><a href="#proper-care">Proper Care</a></li>
+      <li><a href="#consequences">Consequences</a></li>
+      <li><a href="#project-team">Project Team</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <!-- Header -->
   <header>
+    <!-- SCHOOL LOGOS LEFT SIDE -->
+    <div class="header-logos">
+      <img src="school1.png" alt="School Logo 1">
+      <img src="school2.png" alt="School Logo 2">
+    </div>
+
     <img src="tooth.png" class="title-icon" alt="Tooth Icon">
+    
     <h1 class="lang-en">Permanent Dentition</h1>
     <h1 class="lang-ph" style="display:none;">Permanent na Ngipin</h1>
+
     <p class="lang-en">Everything you need to know about permanent teeth.</p>
     <p class="lang-ph" style="display:none;">Lahat ng dapat mong malaman tungkol sa permanenteng ngipin.</p>
   </header>
@@ -235,6 +248,13 @@
     <p class="lang-en">Without proper care, permanent teeth—unlike baby teeth—do not naturally get replaced. Damage is often irreversible and may require costly interventions (root canals, crowns, extractions, implants).</p>
     <p class="lang-ph" style="display:none;">Kung walang tamang pangangalaga, ang permanenteng ngipin—hindi tulad ng baby teeth—ay hindi natural na napapalitan. Ang pinsala ay kadalasang hindi na maibabalik at maaaring mangailangan ng mahal na paggamot (root canals, crowns, extraction, implants).</p>
   </section>
+
+ <!-- FOOTER -->
+  <footer id="project-team">
+    <p><strong>© 2025 | De Ocampo Memorial College – College of Dentistry | Dental Informatics</strong><p>
+    <p> Hernandez, B. • Perciano, L. • Mesa, K. • Espiritu, E. • Bucao, A.</p>
+    <a href="#" class="back-to-top">Back to top ↑</a>
+  </footer>
 
   <!-- Scripts -->
   <script src="script.js"></script>
